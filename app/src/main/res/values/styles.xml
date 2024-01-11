@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize the primary color -->
+        <item name="colorPrimary">@color/colorPurple</item>
+        <item name="colorPrimaryDark">@color/colorPurpleDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+        <!-- Customize the text appearance in the Toolbar -->
+        <item name="android:toolbarStyle">@style/MyToolbarStyle</item>
+    </style>
+
+    <style name="MyToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:layout_gravity">start</item>
+        <item name="android:background">@color/colorPurple</item>
+        <item name="titleTextAppearance">@style/MyToolbarTitleTextAppearance</item>
+    </style>
+
+    <style name="MyToolbarTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+</resources>

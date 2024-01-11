@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar"
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPurple"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BBIAnak"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:gravity="left"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/appbar"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BERAT BADAN IDEAL ANAK USIA 0-5 TAHUN"
+                android:textSize="26dp"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:id="@+id/namaTextView"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama anak:"
+                android:textSize="16dp"
+                />
+            <EditText
+                android:id="@+id/namaAnakEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" "
+                />
+
+            <TextView
+                android:id="@+id/UsiaTextView"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Usia:"
+                android:textSize="16dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/tahunEditText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:inputType="number"
+                    android:hint=" "
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tahunLabel"
+                    android:layout_toEndOf="@+id/tahunEditText"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:text="tahun"
+                    android:textSize="16dp"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:id="@+id/bulanEditText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/tahunLabel"
+                    android:hint=" "
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/bulanLabel"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/bulanEditText"
+                    android:text="bulan"
+                    android:textSize="16dp"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_background"
+                android:textColor="@color/black"
+                android:text="HITUNG"
+                android:textSize="14dp"
+                android:onClick="hitungBbIdeal"/>
+
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hasil"
+                android:textColor="@color/black"
+                android:textSize="23dp"
+                android:gravity="left"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
